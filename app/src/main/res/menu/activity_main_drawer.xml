@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_home"
+            android:title="Home" />
+        <item
+        android:id="@+id/navigation_shop_by_category"
+        android:title="Shop By Category" />
+        <item
+        android:id="@+id/navigation_orders"
+        android:title="Orders" />
+        <item
+            android:id="@+id/navigation_special_offers"
+            android:title="Special Offers" />
+        <item
+            android:id="@+id/navigation_gift_cards"
+            android:title="Gift Cards" />
+        <item
+            android:id="@+id/navigation_notification"
+            android:title="Notification" />
+        <item
+            android:id="@+id/navigation_customer_services"
+            android:title="Customer Service" />
+        <item
+            android:id="@+id/navigation_settings"
+            android:title="Settings" />
+        <item
+            android:id="@+id/navigation_logout"
+            android:title="Log Out" />
+    </group>
+
+
+</menu>
