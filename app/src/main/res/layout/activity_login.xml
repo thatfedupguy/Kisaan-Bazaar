@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="130dp"
+        android:background="@drawable/ic_logo" />
+
+    <LinearLayout
+        android:id="@+id/login_background"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="391dp"
+        android:layout_below="@+id/login_logo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/ic_login_background" >
+
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/round_white_background"
+            android:elevation="5dp"
+            android:fontFamily="@font/flamenco"
+            android:paddingHorizontal="10dp"
+            android:hint="Enter your email" />
+
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_white_background"
+            android:elevation="5dp"
+            android:hint="Enter password"
+            android:paddingHorizontal="10dp"
+            android:fontFamily="@font/flamenco" />
+
+        <Button
+            android:layout_width="114dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/round_white_background"
+            android:elevation="5dp"
+            android:text="Login" />
+"
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_background"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-19dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-1dp"
+        android:background="@drawable/ic_login_bottom_design" />
+
+</RelativeLayout>
