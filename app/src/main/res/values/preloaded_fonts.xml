@@ -3,5 +3,6 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/flamenco</item>
         <item>@font/flamenco_light</item>
+        <item>@font/montserrat</item>
     </array>
 </resources>

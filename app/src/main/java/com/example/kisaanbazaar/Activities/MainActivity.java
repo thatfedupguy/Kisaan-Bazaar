@@ -1,4 +1,4 @@
-package com.example.kisaanbazaar;
+package com.example.kisaanbazaar.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -6,12 +6,19 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.example.kisaanbazaar.Fragments.CustomerServicesFragment;
+import com.example.kisaanbazaar.Fragments.GiftCardsFragment;
+import com.example.kisaanbazaar.Fragments.HomeFragment;
+import com.example.kisaanbazaar.Fragments.NotificationsFragment;
+import com.example.kisaanbazaar.Fragments.OrdersFragment;
+import com.example.kisaanbazaar.Fragments.SettingsFragment;
+import com.example.kisaanbazaar.Fragments.ShopByCategoryFragment;
+import com.example.kisaanbazaar.Fragments.SpecialOffersFragment;
+import com.example.kisaanbazaar.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -64,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragment = new SettingsFragment();
                 break;
             case R.id.navigation_logout:
-                fragment = new LogoutFragment();
+                Toast.makeText(this, "User Logged out Successfully!", Toast.LENGTH_SHORT).show();
                 break;
 
         }
