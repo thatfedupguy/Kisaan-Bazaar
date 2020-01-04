@@ -1,80 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".Activities.LoginActivity">
 
-    <ImageView
-        android:id="@+id/login_logo"
+
+
+    <RelativeLayout
+        android:id="@+id/skip_buttonId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        style="@style/SelectableItemBackground"
+        android:foreground="?android:selectableItemBackground"
+        tools:ignore="UnusedAttribute">
+
+        <TextView
+            android:id="@+id/skip_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/skip"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_centerInParent="true"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/black"
+            android:layout_below="@+id/skip_text"/>
+
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="130dp"
-        android:background="@drawable/ic_logo" />
+        android:layout_centerInParent="true"
+        android:layout_marginTop="150dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="75dp">
 
-    <LinearLayout
-        android:id="@+id/login_background"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="391dp"
-        android:layout_below="@+id/login_logo"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/ic_login_background" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/green_gradient">
 
-        <EditText
-            android:layout_width="220dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="100dp"
-            android:background="@drawable/round_white_background"
-            android:elevation="5dp"
-            android:fontFamily="@font/flamenco"
-            android:paddingHorizontal="10dp"
-            android:hint="Enter your email" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_foreground"
+                android:layout_centerInParent="true"/>
 
-        <EditText
-            android:layout_width="220dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/round_white_background"
-            android:elevation="5dp"
-            android:hint="Enter password"
-            android:paddingHorizontal="10dp"
-            android:fontFamily="@font/flamenco" />
 
-        <Button
-            android:layout_width="114dp"
-            android:layout_height="66dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/round_white_background"
-            android:elevation="5dp"
-            android:text="Login" />
-"
-    </LinearLayout>
+        </RelativeLayout>
 
-    <ImageView
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/google_buttonId"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_background"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
+        android:layout_height="48dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="18dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        style="@style/SelectableItemBackground"
+        app:cardBackgroundColor="@color/white"
+        android:foreground="?android:selectableItemBackground"
+        android:layout_above="@+id/facebook_buttonId"
+        android:layout_marginBottom="12dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/continue_with_google"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/facebook_buttonId"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="18dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:selectableItemBackground"
+        android:layout_above="@+id/phone_buttonId"
+        android:layout_marginBottom="12dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/facebook_blue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/continue_with_facebook"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/phone_buttonId"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="18dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:selectableItemBackground"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="-19dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-1dp"
-        android:background="@drawable/ic_login_bottom_design" />
+        android:layout_marginBottom="18dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/green_gradient">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/continue_with_phone"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
 
 </RelativeLayout>
