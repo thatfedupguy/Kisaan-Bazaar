@@ -48,11 +48,12 @@
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:id="@+id/logo_card"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         app:cardElevation="0dp"
         app:cardCornerRadius="75dp">
 
@@ -72,6 +73,44 @@
 
     </androidx.cardview.widget.CardView>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/logo_card">
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/black"
+            android:textSize="28sp"/>
+
+        <TextView
+            android:id="@+id/app_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/app_name"
+            android:text="@string/app_description"/>
+
+
+    </RelativeLayout>
+
+
     <androidx.cardview.widget.CardView
         android:id="@+id/google_buttonId"
         android:layout_width="match_parent"
@@ -79,14 +118,14 @@
         android:layout_marginEnd="18dp"
         android:layout_marginStart="18dp"
         app:cardCornerRadius="8dp"
-        app:cardElevation="8dp"
+        app:cardElevation="2dp"
         android:clickable="true"
         android:focusable="true"
         style="@style/SelectableItemBackground"
         app:cardBackgroundColor="@color/white"
         android:foreground="?android:selectableItemBackground"
         android:layout_above="@+id/facebook_buttonId"
-        android:layout_marginBottom="12dp">
+        android:layout_marginBottom="8dp">
 
 
         <RelativeLayout
@@ -103,6 +142,15 @@
                 android:textSize="14sp"/>
 
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/google_logo"
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="28dp"/>
+
+
         </RelativeLayout>
 
 
@@ -115,12 +163,12 @@
         android:layout_marginEnd="18dp"
         android:layout_marginStart="18dp"
         app:cardCornerRadius="8dp"
-        app:cardElevation="8dp"
+        app:cardElevation="2dp"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:selectableItemBackground"
         android:layout_above="@+id/phone_buttonId"
-        android:layout_marginBottom="12dp">
+        android:layout_marginBottom="8dp">
 
 
         <RelativeLayout
@@ -137,6 +185,14 @@
                 android:textColor="@color/white"
                 android:textSize="14sp"/>
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/facebook_logo"
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="28dp"/>
+
 
         </RelativeLayout>
 
@@ -150,7 +206,7 @@
         android:layout_marginEnd="18dp"
         android:layout_marginStart="18dp"
         app:cardCornerRadius="8dp"
-        app:cardElevation="8dp"
+        app:cardElevation="2dp"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:selectableItemBackground"
@@ -171,6 +227,14 @@
                 android:fontFamily="@font/montserrat"
                 android:textColor="@color/white"
                 android:textSize="14sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/phone_logo"
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="28dp"/>
 
 
         </RelativeLayout>

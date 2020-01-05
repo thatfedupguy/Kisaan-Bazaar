@@ -5,26 +5,22 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
-
 import com.example.kisaanbazaar.Fragments.CustomerServicesFragment;
 import com.example.kisaanbazaar.Fragments.GiftCardsFragment;
-import com.example.kisaanbazaar.Fragments.HomeFragment;
+import com.example.kisaanbazaar.Fragments.MainFragment;
 import com.example.kisaanbazaar.Fragments.NotificationsFragment;
 import com.example.kisaanbazaar.Fragments.OrdersFragment;
 import com.example.kisaanbazaar.Fragments.SettingsFragment;
-import com.example.kisaanbazaar.Fragments.ShopByCategoryFragment;
-import com.example.kisaanbazaar.Fragments.SpecialOffersFragment;
 import com.example.kisaanbazaar.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
+    public static final String TAG = MainActivity.class.getSimpleName();
+    public static DrawerLayout drawerLayout;
 
 
     @Override
@@ -32,9 +28,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         drawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setBackgroundColor(getResources().getColor(R.color.white));
         navigationView.setNavigationItemSelectedListener(this);
-        displayView(R.id.navigation_home);
+        navigationView.setCheckedItem(R.id.navigation_main);
+        displayView(R.id.navigation_main);
     }
 
     @Override
@@ -46,17 +44,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void displayView(int viewId) {
         Fragment fragment = null;
         switch (viewId) {
-            case R.id.navigation_home:
-                fragment = new HomeFragment();
+            case R.id.navigation_main:
+                fragment = MainFragment.newInstance(R.id.navigation_main);
                 break;
             case R.id.navigation_shop_by_category:
-                fragment = new ShopByCategoryFragment();
+                fragment = MainFragment.newInstance(R.id.navigation_shop_by_category);
                 break;
             case R.id.navigation_orders:
                 fragment = new OrdersFragment();
                 break;
             case R.id.navigation_special_offers:
-                fragment = new SpecialOffersFragment();
+                fragment = MainFragment.newInstance(R.id.navigation_special_offers);
                 break;
             case R.id.navigation_gift_cards:
                 fragment = new GiftCardsFragment();

@@ -1,33 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/navigation_home"
-            android:title="Home" />
+            android:id="@+id/navigation_main"
+            android:title="Home"
+            android:icon="@drawable/selector_home"/>
+
         <item
-        android:id="@+id/navigation_shop_by_category"
-        android:title="Shop By Category" />
+            android:id="@+id/navigation_shop_by_category"
+            android:title="Shop By Category"
+            android:icon="@drawable/selector_categories"/>
+
         <item
-        android:id="@+id/navigation_orders"
-        android:title="Orders" />
+            android:id="@+id/navigation_orders"
+            android:title="My Orders" />
+
         <item
             android:id="@+id/navigation_special_offers"
-            android:title="Special Offers" />
+            android:title="Special Offers"
+            android:icon="@drawable/selector_offers"/>
+
         <item
             android:id="@+id/navigation_gift_cards"
             android:title="Gift Cards" />
+
         <item
             android:id="@+id/navigation_notification"
             android:title="Notification" />
+
         <item
             android:id="@+id/navigation_customer_services"
-            android:title="Customer Service" />
+            android:title="Customer Support" />
+
         <item
             android:id="@+id/navigation_settings"
             android:title="Settings" />
+
         <item
             android:id="@+id/navigation_logout"
             android:title="Log Out" />
+
     </group>
 
 

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.OffersFragment">
+    tools:context=".Fragments.CategoryFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Offers Fragment"
+        android:text="Category Fragment"
         android:fontFamily="@font/montserrat"
         android:layout_centerInParent="true"
         android:textSize="28sp"
