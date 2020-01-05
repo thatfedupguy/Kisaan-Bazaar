@@ -38,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
                 PreferenceHandler handler = new PreferenceHandler(LoginActivity.this);
                 handler.saveInt(LOGIN_STATUS,LOGIN_SKIPPED);
                 startActivity(new Intent(LoginActivity.this,MainActivity.class));
+
             }
         });
 

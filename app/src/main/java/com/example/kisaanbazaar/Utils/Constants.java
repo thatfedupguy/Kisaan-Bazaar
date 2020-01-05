@@ -8,6 +8,9 @@ public class Constants {
     public static final int LOGIN_DONE = 0;
     public static final int LOGIN_SKIPPED = 1;
     public static final int LOGIN_INCOMPLETE = 2;
+    public static final int PRICE_IN_KG = 0;
+    public static final int PRICE_IN_LITRES = 1;
+    public static final int PRICE_IN_DOZENS = 2;
 
 
 
