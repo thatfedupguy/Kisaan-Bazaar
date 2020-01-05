@@ -1,37 +1,26 @@
 package com.example.kisaanbazaar.Fragments;
 
-
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-
 import com.example.kisaanbazaar.Adapters.CategoryAdapter;
 import com.example.kisaanbazaar.Adapters.ProductAdapter;
 import com.example.kisaanbazaar.Models.Product;
 import com.example.kisaanbazaar.R;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    RecyclerView rv_products, rv_categories;
-    ProductAdapter productAdapter;
-    ArrayList<Product> products;
-    CategoryAdapter categoryAdapter;
-    String[] categories = {"Vegetables", "Grains", "Dairy", "Spices"};
+    private RecyclerView rv_products, rv_categories;
+    private ProductAdapter productAdapter;
+    private ArrayList<Product> products;
+    private CategoryAdapter categoryAdapter;
+    private String[] categories = {"Vegetables", "Grains", "Dairy", "Spices"};
 
     public HomeFragment() {
         // Required empty public constructor
@@ -54,7 +43,9 @@ public class HomeFragment extends Fragment {
         generateProducts();
         return view;
     }
-    public void generateProducts(){
+
+
+    private void generateProducts(){
         for(int i = 0; i < 10; i++){
             Product product = new Product("Cauliflower", true, false, false, 40, false);
             products.add(product);

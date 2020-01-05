@@ -7,15 +7,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:openDrawer="start">
+
     <include
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer"/>
+        app:menu="@menu/activity_main_drawer"
+        app:itemIconSize="24dp"
+        android:theme="@style/NavigationTheme"
+        app:itemTextColor="@drawable/navigation_tint_selector"
+        app:itemIconTint="@drawable/navigation_tint_selector"/>
+
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -8,6 +8,9 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="facebook_blue">#3B5998</color>
-
+    <color name="grey">#9E9E9E</color>
+    <color name="material_dark">#424242</color>
+    <color name="transparent_gray">#509E9E9E</color>
+    <color name="transparent_white">#60ffffff</color>
     <color name="black_overlay">#66000000</color>
 </resources>
