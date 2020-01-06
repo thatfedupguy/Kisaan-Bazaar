@@ -27,19 +27,14 @@ public class CartFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_cart,container,false);
-    }
-
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        View view =  inflater.inflate(R.layout.fragment_cart,container,false);
         rv_cart_items = view.findViewById(R.id.rv_cart_items);
         cartItems = new ArrayList<>();
         cartItemAdapter = new CartItemAdapter(getContext(), cartItems);
         rv_cart_items.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
         rv_cart_items.setAdapter(cartItemAdapter);
         generateCartItems();
+        return view;
     }
 
     private void generateCartItems(){

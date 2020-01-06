@@ -18,6 +18,7 @@
         android:src="@drawable/ic_cauliflower_image" />
 
     <TextView
+        android:textColor="@color/grey"
         android:id="@+id/tv_product_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,6 +31,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:textColor="@color/grey"
         android:id="@+id/tv_product_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,6 +46,7 @@
         android:textSize="8sp" />
 
     <TextView
+
         android:id="@+id/tv_available_offers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,11 +70,13 @@
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/iv_product">
         <TextView
+            android:textColor="@color/grey"
             android:fontFamily="@font/montserrat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Quantity : "/>
         <org.angmarch.views.NiceSpinner
+            android:textColor="@color/grey"
             android:id="@+id/spinner_quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -83,6 +88,7 @@
 
 
     <TextView
+        android:textColor="@color/grey"
         android:id="@+id/tv_price"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
@@ -95,6 +101,7 @@
         android:text="10,000" />
 
     <TextView
+        android:textColor="@color/grey"
         android:id="@+id/tv_old_price"
         android:fontFamily="@font/montserrat"
         android:layout_width="74dp"
@@ -107,6 +114,7 @@
         android:text="11,000" />
 
     <TextView
+        android:textColor="@color/grey"
         android:id="@+id/tv_days_for_delivery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -118,6 +126,7 @@
         android:text="Delivery in 5-7 Days" />
 
     <TextView
+        android:textColor="@color/grey"
         android:id="@+id/tv_info_for_extra_charges"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -142,6 +151,7 @@
         android:textColor="#fff" />
 
     <Button
+        android:textColor="@color/grey"
         android:id="@+id/btn_remove"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
