@@ -34,6 +34,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     // OpenSource Library - SearchView
     implementation 'com.github.mancj:MaterialSearchBar:0.8.2'
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+    implementation 'com.github.arcadefire:nice-spinner:1.4.5'
 }
 repositories {
     mavenCentral()
