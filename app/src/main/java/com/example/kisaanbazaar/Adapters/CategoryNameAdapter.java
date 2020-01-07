@@ -4,21 +4,16 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.kisaanbazaar.Models.Category;
 import com.example.kisaanbazaar.R;
 
-import java.util.ArrayList;
+public class CategoryNameAdapter extends RecyclerView.Adapter<CategoryNameAdapter.CategoryViewHolder> {
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
-    ArrayList<Category> categories;
+    String[] categories;
 
-    public CategoryAdapter(ArrayList<Category> categories) {
+    public CategoryNameAdapter(String[] categories) {
         this.categories = categories;
     }
 
@@ -26,30 +21,27 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     @Override
     public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater li = (LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = li.inflate(R.layout.list_item_category, parent, false);
-        return new CategoryViewHolder(view);
+        View itemView = li.inflate(R.layout.list_item_category_name, parent, false);
+        return new CategoryViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
-
-        Category category = categories.get(position);
-        holder.tv_category_name.setText(category.getName());
-
+        String string = categories[position];
+        holder.tv_category.setText(string);
     }
 
     @Override
     public int getItemCount() {
-        return categories.size();
+        return categories.length;
     }
 
     public class CategoryViewHolder extends RecyclerView.ViewHolder {
-        ImageView iv_category;
-        TextView tv_category_name;
+        TextView tv_category;
         public CategoryViewHolder(@NonNull View itemView) {
             super(itemView);
-            iv_category = itemView.findViewById(R.id.iv_category);
-            tv_category_name = itemView.findViewById(R.id.tv_category_name);
+            tv_category = itemView.findViewById(R.id.tv_category);
         }
     }
 }
+

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.kisaanbazaar.Adapters.CategoryAdapter;
+import com.example.kisaanbazaar.Adapters.CategoryNameAdapter;
 import com.example.kisaanbazaar.Adapters.ProductAdapter;
 import com.example.kisaanbazaar.Models.Product;
 import com.example.kisaanbazaar.R;
@@ -19,7 +19,7 @@ public class HomeFragment extends Fragment {
     private RecyclerView rv_products, rv_categories;
     private ProductAdapter productAdapter;
     private ArrayList<Product> products;
-    private CategoryAdapter categoryAdapter;
+    private CategoryNameAdapter categoryNameAdapter;
     private String[] categories = {"Vegetables", "Grains", "Dairy", "Spices"};
 
     public HomeFragment() {
@@ -35,11 +35,11 @@ public class HomeFragment extends Fragment {
         rv_categories = view.findViewById(R.id.rv_product_category);
         products = new ArrayList<>();
         productAdapter = new ProductAdapter(products);
-        categoryAdapter = new CategoryAdapter(categories);
+        categoryNameAdapter = new CategoryNameAdapter(categories);
         rv_categories.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         rv_products.setLayoutManager(new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false));
         rv_products.setAdapter(productAdapter);
-        rv_categories.setAdapter(categoryAdapter);
+        rv_categories.setAdapter(categoryNameAdapter);
         generateProducts();
         return view;
     }
