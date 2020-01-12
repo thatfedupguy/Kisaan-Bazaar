@@ -20,14 +20,26 @@ import static com.example.kisaanbazaar.Utils.Constants.ADRRESS_DISTRICT;
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
 
     private static final String TAG = ProductAdapter.class.getSimpleName();
+    private OnItemClickListener onItemClickListener;
     private List<Products> products;
-    private boolean isFavourite = false;
+    private boolean isFavourite;
     private Context mContext;
 
     public ProductAdapter(Context mContext, List<Products> products, boolean isFavourite) {
         this.mContext = mContext;
         this.products = products;
         this.isFavourite = isFavourite;
+    }
+
+
+    public interface OnItemClickListener {
+        void OnItemClick(int position);
+        void OnItemLongClick(int position);
+    }
+
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
     }
 
     @NonNull
@@ -68,7 +80,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 //        });
     }
 
-    class ProductViewHolder extends RecyclerView.ViewHolder {
+    class ProductViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
         TextView tv_name, tv_price ,tv_address;
         ImageView iv_product, iv_favourite;
         CardView like_button;
@@ -76,12 +88,25 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         ProductViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            itemView.setOnClickListener(this);
+            itemView.setOnLongClickListener(this);
             tv_name = itemView.findViewById(R.id.product_name);
             tv_price = itemView.findViewById(R.id.product_price);
             tv_address = itemView.findViewById(R.id.product_address);
             iv_product = itemView.findViewById(R.id.iv_product);
             iv_favourite = itemView.findViewById(R.id.favourite_image);
             like_button = itemView.findViewById(R.id.like_button);
+        }
+
+        @Override
+        public void onClick(View v) {
+            onItemClickListener.OnItemClick(this.getLayoutPosition());
+        }
+
+        @Override
+        public boolean onLongClick(View v) {
+            onItemClickListener.OnItemLongClick(this.getLayoutPosition());
+            return false;
         }
     }
 

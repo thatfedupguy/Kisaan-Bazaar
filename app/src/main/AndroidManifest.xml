@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.FarmerMainActivity"></activity>
+        <activity android:name=".Activities.ProductsActivity"></activity>
+        <activity android:name=".Activities.ProductActivity" />
+        <activity android:name=".Activities.FarmerMainActivity" />
         <activity android:name=".Activities.OtpVerificationActivity" />
         <activity android:name=".Activities.FarmerLoginActivity" />
         <activity

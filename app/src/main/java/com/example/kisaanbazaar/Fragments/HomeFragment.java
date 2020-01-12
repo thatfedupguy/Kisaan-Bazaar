@@ -1,5 +1,6 @@
 package com.example.kisaanbazaar.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -8,14 +9,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.example.kisaanbazaar.Activities.ProductsActivity;
 import com.example.kisaanbazaar.Adapters.CategoryNameAdapter;
 import com.example.kisaanbazaar.Adapters.ProductAdapter;
 import com.example.kisaanbazaar.Handlers.JsonHandler;
-import com.example.kisaanbazaar.Models.Product;
 import com.example.kisaanbazaar.Models.Products;
 import com.example.kisaanbazaar.R;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.example.kisaanbazaar.Utils.Constants.ADDRESS_STATE;
+import static com.example.kisaanbazaar.Utils.Constants.ADRRESS_DISTRICT;
 
 public class HomeFragment extends Fragment {
 
@@ -44,6 +48,25 @@ public class HomeFragment extends Fragment {
         rv_products.setLayoutManager(new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false));
         rv_products.setAdapter(productAdapter);
         rv_categories.setAdapter(categoryNameAdapter);
+        productAdapter.setOnItemClickListener(new ProductAdapter.OnItemClickListener() {
+            @Override
+            public void OnItemClick(int position) {
+                String address = products.get(position).getAddress().get(ADRRESS_DISTRICT) + ", "
+                        + products.get(position).getAddress().get(ADDRESS_STATE);
+
+                Intent intent = new Intent(getContext(), ProductsActivity.class);
+                intent.putExtra("name",products.get(position).getName());
+                intent.putExtra("address",address);
+                startActivity(intent);
+            }
+
+            @Override
+            public void OnItemLongClick(int position) {
+
+            }
+        });
+
+
         return view;
     }
 
