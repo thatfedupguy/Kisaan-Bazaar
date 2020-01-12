@@ -1,0 +1,68 @@
+[
+  {
+    "uid": "123412341234",
+    "name": "Dharamandra Kumar",
+    "profile_image": "https://firebasestorage.googleapis.com/v0/b/wallset-official.appspot.com/o/account.png?alt=media",
+    "account_type": "farmer",
+    "login_type": "aadhar",
+    "gender": "male",
+    "email": "kisan@gmail.com",
+    "phone": 9878654532,
+    "is_verified": true,
+    "applied_offers": [
+      "6545322154",
+      "3212614265",
+      "3251436515"
+    ],
+    "address": {
+      "sub": "KH-459,Village Nagaroa",
+      "district": "Karnal",
+      "state": "Haryana",
+      "pincode": "120098"
+    }
+  },
+  {
+    "uid": "567856785678",
+    "name": "Rampaul Kumar",
+    "profile_image": "https://firebasestorage.googleapis.com/v0/b/wallset-official.appspot.com/o/account.png?alt=media&token=6ca42782-36db-4291-8780-41bc16f9682f",
+    "account_type": "farmer",
+    "login_type": "aadhar",
+    "gender": "male",
+    "email": "kisan@gmail.com",
+    "phone": 9878654532,
+    "is_verified": true,
+    "applied_offers": [
+      "6545322154",
+      "3212614265",
+      "3251436515"
+    ],
+    "address": {
+      "sub": "KH-459,Village Nagaroa",
+      "district": "Humgra",
+      "state": "Uttar Pradesh",
+      "pincode": "120098"
+    }
+  },
+  {
+    "uid": "112233445566",
+    "name": "Chandan Patel",
+    "profile_image": "https://firebasestorage.googleapis.com/v0/b/wallset-official.appspot.com/o/account.png?alt=media&token=6ca42782-36db-4291-8780-41bc16f9682f",
+    "account_type": "dealer",
+    "login_type": "aadhar",
+    "gender": "male",
+    "email": "kisan@gmail.com",
+    "phone": 9878654532,
+    "is_verified": true,
+    "applied_offers": [
+      "6545322154",
+      "3212614265",
+      "3251436515"
+    ],
+    "address": {
+      "sub": "MH-459,Village Amagra",
+      "district": "Sampur",
+      "state": "Jharkhand",
+      "pincode": "120098"
+    }
+  }
+]

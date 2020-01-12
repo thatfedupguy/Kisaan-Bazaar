@@ -33,12 +33,60 @@
 
             </androidx.cardview.widget.CardView>
 
-            <ImageView
-                android:src="@drawable/app_banner"
-                android:paddingTop="18dp"
-                android:paddingBottom="18dp"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="240dp"
+                android:layout_margin="18dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_green">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/home_poster"
+                        android:scaleType="centerCrop"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/header_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fresh Farm Products"
+                            android:fontFamily="@font/montserrat"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="24sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/header_text"
+                            android:text="Directly from farmers"
+                            android:textStyle="normal"
+                            android:textColor="@color/light_white"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="14sp"
+                            android:layout_centerInParent="true"
+                            android:textAllCaps="true"/>
+
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:layout_width="match_parent"

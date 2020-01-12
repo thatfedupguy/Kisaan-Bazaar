@@ -6,6 +6,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 import com.example.kisaanbazaar.Fragments.CustomerServicesFragment;
@@ -14,8 +15,13 @@ import com.example.kisaanbazaar.Fragments.MainFragment;
 import com.example.kisaanbazaar.Fragments.NotificationsFragment;
 import com.example.kisaanbazaar.Fragments.OrdersFragment;
 import com.example.kisaanbazaar.Fragments.SettingsFragment;
+import com.example.kisaanbazaar.Handlers.JsonHandler;
+import com.example.kisaanbazaar.Models.Account;
+import com.example.kisaanbazaar.Models.Products;
 import com.example.kisaanbazaar.R;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -33,6 +39,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.navigation_main);
         displayView(R.id.navigation_main);
+
+//        List<Products> productsList = new JsonHandler(this).getAllProducts();
+//        Log.d(TAG, "onCreate: ProductsSize = " + productsList.size());
+//        for (int i=0;i<productsList.size();i++){
+//            Log.d(TAG, "onCreate: Product " + i + " = " + productsList.get(i).toString());
+//        }
+
+//        List<Account> accountList = new JsonHandler(this).getAllAccounts();
+//        Log.d(TAG, "onCreate: ProductsSize = " + accountList.size());
+//        for (int i=0;i<accountList.size();i++){
+//            Log.d(TAG, "onCreate: Product " + i + " = " + accountList.get(i).toString());
+//        }
     }
 
     @Override

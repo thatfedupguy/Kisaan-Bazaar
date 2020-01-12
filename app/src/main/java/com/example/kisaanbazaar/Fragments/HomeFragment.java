@@ -10,15 +10,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.example.kisaanbazaar.Adapters.CategoryNameAdapter;
 import com.example.kisaanbazaar.Adapters.ProductAdapter;
+import com.example.kisaanbazaar.Handlers.JsonHandler;
 import com.example.kisaanbazaar.Models.Product;
+import com.example.kisaanbazaar.Models.Products;
 import com.example.kisaanbazaar.R;
 import java.util.ArrayList;
+import java.util.List;
 
 public class HomeFragment extends Fragment {
 
     private RecyclerView rv_products, rv_categories;
     private ProductAdapter productAdapter;
-    private ArrayList<Product> products;
+    private List<Products> products = new ArrayList<>();
     private CategoryNameAdapter categoryNameAdapter;
     private String[] categories = {"Vegetables", "Grains", "Dairy", "Spices"};
 
@@ -33,24 +36,15 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         rv_products = view.findViewById(R.id.rv_products);
         rv_categories = view.findViewById(R.id.rv_product_category);
-        products = new ArrayList<>();
-        productAdapter = new ProductAdapter(products);
+        products = new JsonHandler(getContext()).getAllProducts();
+
+        productAdapter = new ProductAdapter(getContext(),products,false);
         categoryNameAdapter = new CategoryNameAdapter(categories);
         rv_categories.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         rv_products.setLayoutManager(new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false));
         rv_products.setAdapter(productAdapter);
         rv_categories.setAdapter(categoryNameAdapter);
-        generateProducts();
         return view;
-    }
-
-
-    private void generateProducts(){
-        for(int i = 0; i < 10; i++){
-            Product product = new Product("Cauliflower", true, false, false, 40, false);
-            products.add(product);
-            productAdapter.notifyDataSetChanged();
-        }
     }
 
 }

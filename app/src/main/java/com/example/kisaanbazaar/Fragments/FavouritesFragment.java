@@ -11,16 +11,19 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.kisaanbazaar.Adapters.ProductAdapter;
+import com.example.kisaanbazaar.Handlers.JsonHandler;
 import com.example.kisaanbazaar.Models.Product;
+import com.example.kisaanbazaar.Models.Products;
 import com.example.kisaanbazaar.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FavouritesFragment extends Fragment {
 
-    RecyclerView rv_favourite_products;
-    ProductAdapter productAdapter;
-    ArrayList<Product> products;
+    private RecyclerView rv_favourite_products;
+    private ProductAdapter productAdapter;
+    private List<Products> products = new ArrayList<>();
 
 
     @Nullable
@@ -34,18 +37,9 @@ public class FavouritesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         rv_favourite_products = view.findViewById(R.id.rv_favourite_products);
-        products = new ArrayList<>();
-        productAdapter = new ProductAdapter(products);
+        products = new JsonHandler(getContext()).getAllProducts();
+        productAdapter = new ProductAdapter(getContext(),products,true);
         rv_favourite_products.setLayoutManager(new GridLayoutManager(getContext(), 2, RecyclerView.VERTICAL, false));
         rv_favourite_products.setAdapter(productAdapter);
-        generateProducts();
-    }
-
-    private void generateProducts(){
-        for(int i = 0; i < 10; i++){
-            Product product = new Product("Cauliflower", true, false, false, 40, true);
-            products.add(product);
-            productAdapter.notifyDataSetChanged();
-        }
     }
 }
