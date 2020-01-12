@@ -88,7 +88,7 @@ public class CartItemAdapter extends RecyclerView.Adapter<CartItemAdapter.CartIt
             for(int i = 1; i < 1001; i++){
                 quantities.add(i);
             }
-            quantityAdapter = new ArrayAdapter(context, android.R.layout.simple_spinner_item, quantities);
+            quantityAdapter = new ArrayAdapter(context, R.layout.spinner_text, quantities);
             spinner_quantity.setAdapter(quantityAdapter);
         }
     }
