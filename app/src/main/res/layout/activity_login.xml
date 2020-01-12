@@ -1,48 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:fitsSystemWindows="true"
     tools:context=".Activities.LoginActivity">
 
 
-
     <RelativeLayout
         android:id="@+id/skip_buttonId"
+        style="@style/SelectableItemBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="18dp"
-        android:layout_alignParentEnd="true"
         android:clickable="true"
         android:focusable="true"
-        android:padding="8dp"
-        style="@style/SelectableItemBackground"
         android:foreground="?android:selectableItemBackground"
+        android:padding="8dp"
         tools:ignore="UnusedAttribute">
 
         <TextView
             android:id="@+id/skip_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:fontFamily="@font/montserrat"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
             android:text="@string/skip"
             android:textColor="@color/black"
             android:textSize="14sp"
-            android:layout_centerInParent="true"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
             android:textStyle="bold" />
 
         <View
             android:layout_width="50dp"
             android:layout_height="2dp"
+            android:layout_below="@+id/skip_text"
             android:layout_marginTop="4dp"
-            android:background="@color/black"
-            android:layout_below="@+id/skip_text"/>
+            android:background="@color/black" />
 
     </RelativeLayout>
 
@@ -54,8 +53,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:layout_marginTop="100dp"
-        app:cardElevation="0dp"
-        app:cardCornerRadius="75dp">
+        app:cardCornerRadius="75dp"
+        app:cardElevation="0dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -65,8 +64,8 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/logo_foreground"
-                android:layout_centerInParent="true"/>
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo_foreground" />
 
 
         </RelativeLayout>
@@ -76,36 +75,36 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="18dp"
+        android:layout_below="@+id/logo_card"
         android:layout_centerInParent="true"
-        android:layout_below="@+id/logo_card">
+        android:layout_margin="18dp">
 
         <TextView
             android:id="@+id/app_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:fontFamily="@font/montserrat"
-            android:textStyle="bold"
-            android:layout_centerInParent="true"
             android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/app_name"
             android:textColor="@color/black"
-            android:textSize="28sp"/>
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/app_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat"
-            android:textSize="18sp"
-            android:layout_marginStart="18dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:textColor="@color/grey"
-            android:layout_centerInParent="true"
             android:layout_below="@+id/app_name"
-            android:text="@string/app_description"/>
+            android:layout_centerInParent="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text="@string/app_description"
+            android:textColor="@color/grey"
+            android:textSize="18sp" />
 
 
     </RelativeLayout>
@@ -113,19 +112,19 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/google_buttonId"
+        style="@style/SelectableItemBackground"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginEnd="18dp"
+        android:layout_above="@+id/facebook_buttonId"
         android:layout_marginStart="18dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="2dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="8dp"
         android:clickable="true"
         android:focusable="true"
-        style="@style/SelectableItemBackground"
-        app:cardBackgroundColor="@color/white"
         android:foreground="?android:selectableItemBackground"
-        android:layout_above="@+id/facebook_buttonId"
-        android:layout_marginBottom="8dp">
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
 
 
         <RelativeLayout
@@ -136,19 +135,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/continue_with_google"
                 android:fontFamily="@font/montserrat"
+                android:text="@string/continue_with_google"
                 android:textColor="@color/black"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/google_logo"
-                android:layout_centerInParent="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="28dp"/>
+                android:layout_centerInParent="true"
+                android:layout_marginStart="28dp"
+                android:src="@drawable/google_logo" />
 
 
         </RelativeLayout>
@@ -160,15 +159,15 @@
         android:id="@+id/facebook_buttonId"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginEnd="18dp"
+        android:layout_above="@+id/phone_buttonId"
         android:layout_marginStart="18dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="2dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="8dp"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:selectableItemBackground"
-        android:layout_above="@+id/phone_buttonId"
-        android:layout_marginBottom="8dp">
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
 
 
         <RelativeLayout
@@ -180,18 +179,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/continue_with_facebook"
                 android:fontFamily="@font/montserrat"
+                android:text="@string/continue_with_facebook"
                 android:textColor="@color/white"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/facebook_logo"
-                android:layout_centerInParent="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="28dp"/>
+                android:layout_centerInParent="true"
+                android:layout_marginStart="28dp"
+                android:src="@drawable/facebook_logo" />
 
 
         </RelativeLayout>
@@ -203,15 +202,15 @@
         android:id="@+id/phone_buttonId"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginEnd="18dp"
+        android:layout_above="@+id/textView2"
         android:layout_marginStart="18dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="2dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:selectableItemBackground"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="18dp">
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
 
 
         <RelativeLayout
@@ -223,21 +222,62 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/continue_with_phone"
                 android:fontFamily="@font/montserrat"
+                android:text="@string/continue_with_phone"
                 android:textColor="@color/white"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/phone_logo"
-                android:layout_centerInParent="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="28dp"/>
+                android:layout_centerInParent="true"
+                android:layout_marginStart="28dp"
+                android:src="@drawable/phone_logo" />
 
 
         </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/farmer_loginId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/montserrat"
+        android:text="OR"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/farmer_loginId"
+        style="@style/SelectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:selectableItemBackground"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Farmer Login"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
 
 
     </androidx.cardview.widget.CardView>

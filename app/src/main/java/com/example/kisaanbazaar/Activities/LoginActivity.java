@@ -1,6 +1,7 @@
 package com.example.kisaanbazaar.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 
 import android.app.Activity;
@@ -24,6 +25,8 @@ import static com.example.kisaanbazaar.Utils.Constants.LOGIN_STATUS;
 
 public class LoginActivity extends AppCompatActivity {
 
+    CardView farmer_loginId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
             decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.white));
         }
+        farmer_loginId = findViewById(R.id.farmer_loginId);
         RelativeLayout skipButton = findViewById(R.id.skip_buttonId);
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,8 +47,13 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
-
-
+        farmer_loginId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, FarmerLoginActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
