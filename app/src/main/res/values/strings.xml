@@ -14,13 +14,17 @@
     <string name="app_description">Wholesale exports from your Nearest Warehouse. Fresh Products Directly from the Farmers with Easy Discounts and offers on Large Sales.</string>
     <string name="top_sales">Top Sales</string>
     <string name="top_sales_desc">Curated From Our Fresh Farm</string>
-    <string name="home">Home</string>
     <string name="categories">Categories</string>
     <string name="offers">Offers</string>
     <string name="favourites">Favourites</string>
     <string name="cart">Cart</string>
     <string name="account">Account</string>
     <string name="kisan_example_com">kisan@example.com</string>
+    <string name="product">Product</string>
+    <string name="news">News</string>
+    <string name="chats">Chats</string>
+    <string name="accounts">Accounts</string>
+    <string name="home">Home</string>
 
 
 </resources>
