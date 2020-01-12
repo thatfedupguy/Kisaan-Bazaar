@@ -53,4 +53,9 @@
         <item name="colorControlHighlight">#3353D69F</item>
     </style>
 
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#53D69F</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
 </resources>

@@ -54,8 +54,6 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
     }
 
     @Override
