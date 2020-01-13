@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.ProductActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/colorPrimary">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cabbage_group"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="18dp"
+            android:layout_alignParentBottom="true"/>
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentInsetLeft="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetEnd="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            android:layout_marginTop="18dp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/menu_buttonId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back_vector"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:rotation="180"
+                    android:layout_marginStart="8dp"
+                    android:foreground="?android:selectableItemBackground"
+                    android:padding="12dp"/>
+
+
+                <ImageView
+                    android:id="@+id/options_buttonId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vert_black_24dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:rotation="180"
+                    android:tint="@color/white"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="8dp"
+                    android:foreground="?android:selectableItemBackground"
+                    android:padding="12dp"/>
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/phone_buttonId"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_above="@+id/textView2"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_alignParentBottom="true"
+        android:foreground="?android:selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/green_gradient">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/montserrat"
+                android:text="Contact Farmer"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="28dp"
+                android:src="@drawable/phone_logo" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_layout"
+        android:text="Product Name"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/product_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_name"
+        android:text="district, state"
+        android:textStyle="bold"
+        android:textColor="@color/grey"
+        android:textSize="18dp"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="2dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_address">
+
+        <TextView
+            android:id="@+id/price_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price:  ₹"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"/>
+
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/price_header"
+            android:text="40/Kg"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="8dp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1">
+
+        <TextView
+            android:id="@+id/price_headersa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity:  "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"/>
+
+
+        <TextView
+            android:id="@+id/product_priceas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/price_headersa"
+            android:text="700 Kg"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="8dp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line2">
+
+        <TextView
+            android:id="@+id/price_headerwq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Min Purchase Limit:  "
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"/>
+
+
+        <TextView
+            android:id="@+id/product_pricewq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/price_headerwq"
+            android:text="100 Kg"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="8dp"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:layout_below="@+id/line3"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"/>
+
+
+    <TextView
+        android:id="@+id/desc_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textColor="@color/grey"
+        android:textSize="14sp"
+        android:layout_below="@+id/desc"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="8dp"/>
+
+
+</RelativeLayout>

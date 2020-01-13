@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/light_green</item>
     </style>
 
 
@@ -40,7 +41,6 @@
 
     <style name="BottomNavigationTheme" parent="Widget.Design.BottomNavigationView">
         <item name="android:fontFamily">@font/montserrat</item>
-        <item name="android:textStyle">bold</item>
         <item name="android:colorControlHighlight">@color/colorPrimary</item>
     </style>
 

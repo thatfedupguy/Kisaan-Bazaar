@@ -62,8 +62,8 @@
         app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
         android:theme="@style/BottomNavigationTheme"
         app:labelVisibilityMode="labeled"
-        app:itemTextColor="@drawable/navigation_tint_selector"
-        app:itemIconTint="@drawable/navigation_tint_selector"/>
+        app:itemTextColor="@drawable/drawer_tint_selector"
+        app:itemIconTint="@drawable/drawer_tint_selector"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
